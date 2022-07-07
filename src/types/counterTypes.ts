@@ -5,6 +5,8 @@ export interface counterState {
 export enum counterActionConstants {
   INCREMENT = 'INCREMENT',
   DECREMENT = 'DECREMENT',
+  ASYNC_INCREMENT = 'ASYNC_INCREMENT',
+  ASYNC_DECREMENT = 'ASYNC_DECREMENT',
 }
 
 interface counterActionIncrement {

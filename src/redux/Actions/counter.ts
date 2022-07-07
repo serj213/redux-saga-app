@@ -11,3 +11,15 @@ export const decrimentAction = () => {
     type: counterActionConstants.DECREMENT,
   };
 };
+
+export const asyncIncrementAction = () => {
+  return {
+    type: counterActionConstants.ASYNC_INCREMENT,
+  };
+};
+
+export const asyncDecrimentAction = () => {
+  return {
+    type: counterActionConstants.ASYNC_DECREMENT,
+  };
+};

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import styles from './counter.module.css';
-import { incrementAction, decrimentAction } from '../../redux/Actions/counter';
+import { asyncIncrementAction, asyncDecrimentAction } from '../../redux/Actions/counter';
 
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 
@@ -10,11 +10,11 @@ const Counter: React.FC = () => {
   const dispatch = useDispatch();
 
   const incrementHandler = () => {
-    dispatch(incrementAction());
+    dispatch(asyncIncrementAction());
   };
 
   const decrimentHandler = () => {
-    dispatch(decrimentAction());
+    dispatch(asyncDecrimentAction());
   };
 
   return (
