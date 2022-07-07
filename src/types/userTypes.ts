@@ -19,7 +19,7 @@ export interface userFetchError {
 }
 
 export interface stateUserType {
-  user: any;
+  user: any[];
   loading: boolean;
   error: null | string;
 }

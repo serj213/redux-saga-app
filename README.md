@@ -1,8 +1,8 @@
 Стек
 
--React js
--Typscript
--redux
--react-redux
--redux-saga
+-React js <br>
+-Typscript <br>
+-redux <br>
+-react-redux <br>
+-redux-saga <br>
 -axios
