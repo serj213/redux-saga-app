@@ -15,7 +15,7 @@ export const counterReducer = (state = initialState, action: counterActionType) 
     case counterActionConstants.DECREMENT:
       return {
         ...state,
-        value: state.value - 1,
+        value: state.value > 1 ? state.value - 1 : state.value,
       };
 
     default:

@@ -1,19 +1,27 @@
 import React from 'react';
-import styles from './counter.module.css';
-
 import { useDispatch } from 'react-redux';
+import styles from './counter.module.css';
+import { incrementAction, decrimentAction } from '../../redux/Actions/counter';
+
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 
 const Counter: React.FC = () => {
   const { value } = useTypeSelector((state) => state.counter);
+  const dispatch = useDispatch();
 
-  console.log('value', value);
+  const incrementHandler = () => {
+    dispatch(incrementAction());
+  };
+
+  const decrimentHandler = () => {
+    dispatch(decrimentAction());
+  };
 
   return (
     <div className={styles.row}>
-      <button>+</button>
+      <button onClick={incrementHandler}>+</button>
       <p>{value}</p>
-      <button>-</button>
+      <button onClick={decrimentHandler}>-</button>
     </div>
   );
 };
